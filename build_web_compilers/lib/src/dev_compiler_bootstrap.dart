@@ -303,7 +303,7 @@ var _currentDirectory = (function () {
       if (match) return match[1];
     }
     // Safari.
-    return lines[0].match(/(.+):\d+:\d+$/)[1];
+    return lines[0].match(/(.+):\d+:\d+$/)[1].replace(/^@/, "");
   }
   _url = lookupUrl();
   var lastSlash = _url.lastIndexOf('/');
